@@ -2,32 +2,596 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  position: relative;
+  width: 1440px;
+  height: 780px;
+  background: #f6fafd;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.frame-57 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 24px;
+  position: absolute;
+  width: 1126px;
+  height: 264px;
+  left: 156px;
+  top: 246px;
+}
+
+.logo {
+  width: 160px;
+  height: 100px;
+  padding: 0px 0.24px 0px 0px;
+  gap: 0px;
+  opacity: 0px;
+}
+
+.frame-32 {
+  /* Frame 32 */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 12px;
+
+  width: 1126px;
+  height: 140px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.text-area {
+  /* Textarea (Search) */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+
+  width: 1126px;
+  height: 76px;
+
+  border-radius: 12px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.text-area-2 {
+  /* Textarea */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  isolation: isolate;
+
+  width: 1126px;
+  height: 76px;
+
+  border-radius: 12px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+.text-area-contents {
+  /* Contents */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 12px;
+  gap: 6px;
+
+  width: 1126px;
+  height: 76px;
+
+  background: #ffffff;
+  border-radius: 12px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 1;
+  z-index: 0;
+}
+.auto-added-frame {
+  /* Auto-added frame */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+
+  width: 134px;
+  height: 76px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.texts {
+  /* Text */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px 2px;
+
+  width: 938px;
+  height: 76px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+.auto-added-frame {
+  /* Auto-added frame */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+
+  width: 134px;
+  height: 76px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.auto-added-frame-button {
+  /* Button
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  isolation: isolate;
+
+  width: 134px;
+  height: 40px;
+
+  /* GreyScale/100 */
+  background: #000000;
+  border-radius: 12px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.state-layer {
+  /* state-layer */
+
+  box-sizing: border-box;
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  gap: 8px;
+
+  position: static;
+  left: 0px;
+  right: 0px;
+  top: -4px;
+  bottom: 4px;
+
+  /* GreyScale/0 */
+  background: #ffffff;
+  /* GreyScale/100 */
+  border: 2px solid #000000;
+  border-radius: 12px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  z-index: 0;
+}
+
+.label-text {
+  /* label-text */
+
+  width: 68px;
+  height: 20px;
+
+  /* M3/label/large */
+  font-family: "Bonyade Koodak FaNum";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  /* Text Light mode/Title */
+  color: #0f1013;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.text {
+  /* Text */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px 2px;
+  width: 938px;
+  height: 76px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+.frame-327 {
+  /* Frame 327 */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+
+  width: 934px;
+  height: 76px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+.frame-328 {
+  /* Frame 328 */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px;
+  gap: 12px;
+
+  width: 934px;
+  height: 32px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+.search-tag {
+  /* Search Tag */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 6px 6px 10px;
+  gap: 2px;
+
+  width: 69px;
+  height: 32px;
+
+  /* BG Light Mode/Cards */
+  background: #eff4f8;
+  border-radius: 6px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.search-tag-text {
+  /* ادبیات */
+
+  width: 33px;
+  height: 20px;
+
+  /* M3/body/medium */
+  font-family: "Bonyade Koodak FaNum";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  /* identical to box height, or 167% */
+  display: flex;
+  align-items: center;
+  text-align: right;
+
+  /* Text Light mode/Body */
+  color: #30343f;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.text-placeholder {
+  /* Placeholder text */
+
+  width: 205px;
+  height: 20px;
+
+  /* M3/body/medium */
+  font-family: "Bonyade Koodak FaNum";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  /* identical to box height, or 167% */
+  display: flex;
+  align-items: center;
+  text-align: right;
+
+  color: #707070;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.text-contents-search-icon {
+  /* vuesax/outline/search-normal */
+
+  width: 18px;
+  height: 18px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
+
+.frame-31 {
+  /* Frame 31 */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding: 0px;
+  gap: 12px;
+
+  width: 1126px;
+  height: 52px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.frame-333 {
+  /* Frame 333 */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 12px;
+
+  width: 891px;
+  height: 52px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+.assistive-chip {
+  /* Assistive chip */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 0px;
+
+  width: 117px;
+  height: 52px;
+
+  /* GreyScale/0 */
+  background: #ffffff;
+  border-radius: 8px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+.drop-down {
+  /* Drop Down */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0px;
+  gap: 6px;
+  isolation: isolate;
+
+  width: 223px;
+  height: 52px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.frame-189 {
+  /* Frame 189 */
+
+  width: 223px;
+  height: 52px;
+
+  border-radius: 12px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  z-index: 1;
+}
+
+.drop-down-chip {
+  /* Assistive chip */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+
+  position: relative;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+
+  /* GreyScale/0 */
+  background: #ffffff;
+  border-radius: 8px;
+}
+
+.frame-191 {
+  /* Frame 191 */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  gap: 130px;
+
+  margin: 0 auto;
+  width: auto;
+  height: 20px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+
+.frame-191-icon {
+  /* icon */
+
+  margin: 0 auto;
+  width: 14px;
+  height: 14px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.drop-down-text {
+  /* label-text */
+
+  margin: 0 auto;
+  width: 74px;
+  height: 20px;
+
+  /* M3/label/large */
+  font-family: "Bonyade Koodak FaNum";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #c5c5c5;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.button-primary {
+  background-color: #ffffff;
+  width: Hug (71px) px;
+  height: Fixed (32px) px;
+  padding: 6px 16px 6px 16px;
+  gap: 8px;
+  opacity: 0px;
+}
+
+.assistive-chip.added-to-search {
+  background-color: orange;
+  color: #ffffff;
 }

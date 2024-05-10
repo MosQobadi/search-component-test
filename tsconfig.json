@@ -12,6 +12,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "types": ["@fortawesome/free-solid-svg-icons"],
     "plugins": [
       {
         "name": "next"
