@@ -6,7 +6,7 @@ export default function ButtonSecondary() {
     <button>
       <div className="auto-added-frame-button">
         <div className="state-layer">
-          <div className="label-text">جست و جو</div>
+          <p className="label-text">جست و جو</p>
           <SearchIcon />
         </div>
       </div>

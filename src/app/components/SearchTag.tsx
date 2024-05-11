@@ -14,7 +14,6 @@ interface SearchTagProps {
 
 const SearchTag: React.FC<SearchTagProps> = ({ lesson, onRemoveLesson }) => {
   const handleRemoveClick = () => {
-    // Call the onRemoveLesson function and pass the lesson id
     onRemoveLesson(lesson.id);
   };
 

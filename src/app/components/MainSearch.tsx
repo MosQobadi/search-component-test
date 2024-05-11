@@ -1,4 +1,3 @@
-// MainSearch.tsx
 "use client";
 
 import React, { useState } from "react";
@@ -9,9 +8,17 @@ import ButtonSecondary from "./utilities/ButtonSecondary";
 import ArrowDownIcon from "./icons/ArrowDownIcon";
 import SearchIcon from "./icons/SearchIcon";
 import SearchTag from "./SearchTag";
+import DropdownOptions from "../components/DropdownOptions";
 
 export default function MainSearch() {
-  const [lessons, setLessons] = useState([
+  const [isOpen, setIsOpen] = useState(false);
+  const doropDownOptions = [
+    { id: 1, name: "اول دبیرستان" },
+    { id: 2, name: "دوم دبیرستان" },
+    { id: 3, name: "سوم دبیرستان" },
+  ];
+
+  const lessons = [
     {
       id: 1,
       name: "همه",
@@ -40,33 +47,24 @@ export default function MainSearch() {
       id: 7,
       name: "فیزیک",
     },
-  ]);
+  ];
 
   const [searchedLessons, setSearchedLessons] = useState<
     { id: number; name: string }[]
   >([]);
 
   const addLessonToSearch = (lessonToAdd: { id: number; name: string }) => {
-    if (lessonToAdd.name === "همه") {
-      setSearchedLessons([lessonToAdd]);
-    } else {
-      const lessonExists = searchedLessons.find(
-        (lesson) => lesson.id === lessonToAdd.id
-      );
-      if (lessonExists) {
-        return;
-      }
-      setSearchedLessons((prevLessons) => [
-        ...prevLessons.filter((lesson) => lesson.name !== "همه"),
-        lessonToAdd,
-      ]);
-    }
+    setSearchedLessons([lessonToAdd]);
   };
 
   const removeLessonFromSearch = (lessonId: number) => {
     setSearchedLessons((prevLessons) =>
       prevLessons.filter((lesson) => lesson.id !== lessonId)
     );
+  };
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
   };
 
   return (
@@ -88,14 +86,16 @@ export default function MainSearch() {
                       className="text-placeholder"
                       placeholder="... جست و جو بین امتحان ها و درس ها و"
                     />
-                    {searchedLessons.length > 0 &&
-                      searchedLessons.map((searchedLesson) => (
-                        <SearchTag
-                          key={searchedLesson.id}
-                          lesson={searchedLesson}
-                          onRemoveLesson={removeLessonFromSearch}
-                        />
-                      ))}
+                    <div>
+                      {searchedLessons.length > 0 &&
+                        searchedLessons.map((searchedLesson) => (
+                          <SearchTag
+                            key={searchedLesson.id}
+                            lesson={searchedLesson}
+                            onRemoveLesson={removeLessonFromSearch}
+                          />
+                        ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -118,15 +118,13 @@ export default function MainSearch() {
               />
             ))}
           </div>
+
           <div className="drop-down">
-            <div className="frame-189">
-              <div className="drop-down-chip">
-                <div className="frame-191">
-                  <ArrowDownIcon />
-                  <div className="drop-down-text">پایه تحصیلی</div>
-                </div>
-              </div>
-            </div>
+            <DropdownOptions
+              options={doropDownOptions}
+              isOpen={isOpen}
+              toggleDropdown={toggleDropdown}
+            />
           </div>
         </div>
       </div>

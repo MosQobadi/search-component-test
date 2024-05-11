@@ -1,4 +1,5 @@
 import MainSearch from "./components/MainSearch";
+import "./globals.css";
 
 export default function Home() {
   return (

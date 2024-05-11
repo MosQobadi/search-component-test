@@ -2,7 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "BonyadeKoodak"; /* Specify the font family name */
+  src: url("../assets/BonyadeKoodakFaNum-Regular.woff2") format("woff2"); /* Path to your .woff2 font file */
+  /* Add additional font properties if needed, such as font-weight and font-style */
+}
+
 body {
+  font-family: "BonyadeKoodak", sans-serif; /* Use the specified font family */
+  font-weight: 500;
   position: relative;
   width: 1440px;
   height: 780px;
@@ -207,6 +215,7 @@ body {
 
 .state-layer {
   /* state-layer */
+  font-family: "BonyadeKoodak", sans-serif; /* Use the specified font family */
 
   box-sizing: border-box;
 
@@ -319,18 +328,27 @@ body {
   flex-grow: 1;
 }
 
-.search-tag {
-  /* Search Tag */
+.frame-328 > input::placeholder {
+  /* M3/body/medium */
+  font-family: "BonyadeKoodak";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #707070;
+  border-color: transparent;
+}
 
+.search-tag {
   /* Auto layout */
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 6px 6px 6px 10px;
-  gap: 2px;
+  padding: 6px 6px 6px 15px;
+  /* gap: 2px; */
 
-  width: 69px;
+  width: 75px;
   height: 32px;
 
   /* BG Light Mode/Cards */
@@ -346,7 +364,7 @@ body {
 .search-tag-text {
   /* ادبیات */
 
-  width: 33px;
+  width: 20px;
   height: 20px;
 
   /* M3/body/medium */
@@ -372,7 +390,7 @@ body {
 .text-placeholder {
   /* Placeholder text */
 
-  width: 205px;
+  width: 250px;
   height: 20px;
 
   /* M3/body/medium */
@@ -385,13 +403,19 @@ body {
   display: flex;
   align-items: center;
   text-align: right;
-
   color: #707070;
 
   /* Inside auto layout */
+  padding: 5px;
   flex: none;
   order: 0;
   flex-grow: 0;
+}
+
+.text-placeholder:focus {
+  outline: transparent;
+  padding: 15px 5px 15px 0;
+  outline-color: lightgrey;
 }
 
 .text-contents-search-icon {
@@ -535,10 +559,10 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0px;
-  gap: 130px;
+  gap: 207px;
 
   margin: 0 auto;
-  width: auto;
+  width: 199px;
   height: 20px;
 
   /* Inside auto layout */
@@ -547,11 +571,20 @@ body {
   flex-grow: 1;
 }
 
+.button-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.button-arrow {
+  width: 100%;
+}
+
 .frame-191-icon {
   /* icon */
 
   margin: 0 auto;
-  width: 14px;
+  /* width: 14px; */
   height: 14px;
 
   /* Inside auto layout */
@@ -561,25 +594,27 @@ body {
 }
 
 .drop-down-text {
-  /* label-text */
-
-  margin: 0 auto;
-  width: 74px;
-  height: 20px;
-
-  /* M3/label/large */
-  font-family: "Bonyade Koodak FaNum";
-  font-style: normal;
-  font-weight: 500;
+  margin: 0;
+  /* width: 74px; */
+  /* height: 20px; */
+  /* font-style: normal; */
+  /* font-weight: 500; */
   font-size: 14px;
-  line-height: 20px;
-  display: flex;
-  align-items: center;
-  text-align: center;
+  /* line-height: 20px; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* text-align: center; */
   color: #c5c5c5;
   flex: none;
-  order: 1;
-  flex-grow: 0;
+  /* order: 1; */
+  /* flex-grow: 0; */
+}
+
+.dropdown-options {
+}
+
+.dropdown-option-item {
+  padding: 10px 20px;
 }
 
 .button-primary {
