@@ -341,9 +341,11 @@ body {
 
 .search-tag {
   /* Auto layout */
+  font-family: "BonyadeKoodak";
+  font-size: 13px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 6px 6px 6px 15px;
   /* gap: 2px; */
@@ -361,14 +363,12 @@ body {
   flex-grow: 0;
 }
 
-.search-tag-text {
+.search-tag-text > * {
   /* ادبیات */
-
+  /* font-family: "BonyadeKoodak"; */
   width: 20px;
   height: 20px;
-
   /* M3/body/medium */
-  font-family: "Bonyade Koodak FaNum";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -387,14 +387,19 @@ body {
   flex-grow: 0;
 }
 
+.tag-button {
+  width: 25%;
+  max-width: 25%;
+  height: 100%;
+  margin-right: 5px;
+}
+
 .text-placeholder {
   /* Placeholder text */
 
   width: 250px;
   height: 20px;
-
   /* M3/body/medium */
-  font-family: "Bonyade Koodak FaNum";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -467,6 +472,10 @@ body {
   flex: none;
   order: 0;
   flex-grow: 1;
+}
+
+.label-text {
+  font-family: "BonyadeKoodak", sans-serif;
 }
 
 .assistive-chip {

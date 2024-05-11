@@ -20,9 +20,11 @@ const SearchTag: React.FC<SearchTagProps> = ({ lesson, onRemoveLesson }) => {
   return (
     <div className="search-tag">
       <div className="search-tag-text">{lesson.name}</div>
-      <button onClick={handleRemoveClick}>
-        <RemoveIcon />
-      </button>
+      <div className="tag-button">
+        <button onClick={handleRemoveClick}>
+          <RemoveIcon />
+        </button>
+      </div>
     </div>
   );
 };
