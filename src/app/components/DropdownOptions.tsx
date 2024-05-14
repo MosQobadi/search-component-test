@@ -28,9 +28,9 @@ const DropdownOptions: React.FC<DropdownProps> = ({
           </button>
         </div>
       </div>
-      <div className="dropdown-options">
+      <div className="">
         {isOpen && (
-          <ul className="">
+          <ul className="drop-down-list mt-3">
             {options.map((option) => (
               <li className="dropdown-option-item" key={option.id}>
                 {option.name}
