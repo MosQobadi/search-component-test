@@ -19,27 +19,25 @@ const DropdownOptions: React.FC<DropdownProps> = ({
   toggleDropdown,
 }) => {
   return (
-    <div className="frame-189">
-      <div className="drop-down-chip">
-        <div className="frame-191">
-          <button className="button-toggle" onClick={toggleDropdown}>
+    <>
+      <button className="button-toggle" onClick={toggleDropdown}>
+        <div className="frame-189">
+          <span className="dropdown-icon">
             <ArrowDownIcon />
-            <span className="drop-down-text">پایه تحصیلی</span>
-          </button>
+          </span>
+          <div className="drop-down-text">پایه تحصیلی</div>
         </div>
-      </div>
-      <div className="">
-        {isOpen && (
-          <ul className="drop-down-list mt-3">
-            {options.map((option) => (
-              <li className="dropdown-option-item" key={option.id}>
-                {option.name}
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
-    </div>
+      </button>
+      {isOpen && (
+        <ul className="drop-down-list mt-3">
+          {options.map((option) => (
+            <li className="dropdown-option-item" key={option.id}>
+              {option.name}
+            </li>
+          ))}
+        </ul>
+      )}
+    </>
   );
 };
 

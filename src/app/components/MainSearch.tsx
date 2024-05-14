@@ -79,7 +79,7 @@ export default function MainSearch() {
               </div>
               <div className="search-area">
                 <input
-                  className="text-placeholder"
+                  className="search-placeholder"
                   placeholder="... جست و جو بین امتحان ها و درس ها و"
                 />
                 <div>
@@ -93,9 +93,7 @@ export default function MainSearch() {
                     ))}
                 </div>
               </div>
-              <div className="text-contents-search-icon">
-                <SearchIcon />
-              </div>
+              <SearchIcon />
             </div>
           </div>
         </div>
@@ -112,7 +110,6 @@ export default function MainSearch() {
               />
             ))}
           </div>
-
           <div className="drop-down">
             <DropdownOptions
               options={doropDownOptions}
