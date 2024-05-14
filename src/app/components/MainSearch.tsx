@@ -69,34 +69,28 @@ export default function MainSearch() {
 
   return (
     <div className="frame-57">
-      <div>
-        <Logo />
-      </div>
+      <Logo />
       <div className="frame-32">
         <div className="text-area">
           <div className="text-area-2">
             <div className="text-area-contents">
-              <div className="auto-added-frame">
+              <div>
                 <ButtonSecondary />
               </div>
-              <div className="texts">
-                <div className="frame-327">
-                  <div className="frame-328">
-                    <input
-                      className="text-placeholder"
-                      placeholder="... جست و جو بین امتحان ها و درس ها و"
-                    />
-                    <div>
-                      {searchedLessons.length > 0 &&
-                        searchedLessons.map((searchedLesson) => (
-                          <SearchTag
-                            key={searchedLesson.id}
-                            lesson={searchedLesson}
-                            onRemoveLesson={removeLessonFromSearch}
-                          />
-                        ))}
-                    </div>
-                  </div>
+              <div className="search-area">
+                <input
+                  className="text-placeholder"
+                  placeholder="... جست و جو بین امتحان ها و درس ها و"
+                />
+                <div>
+                  {searchedLessons.length > 0 &&
+                    searchedLessons.map((searchedLesson) => (
+                      <SearchTag
+                        key={searchedLesson.id}
+                        lesson={searchedLesson}
+                        onRemoveLesson={removeLessonFromSearch}
+                      />
+                    ))}
                 </div>
               </div>
               <div className="text-contents-search-icon">

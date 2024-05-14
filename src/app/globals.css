@@ -108,32 +108,26 @@ body {
 }
 
 .text-area-contents {
-  /* Contents */
-
-  /* Auto layout */
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   align-items: center;
+  justify-content: space-between;
   padding: 0px 12px;
   gap: 6px;
-
   width: 1126px;
   height: 76px;
-
   background: #ffffff;
   border-radius: 12px;
-
-  /* Inside auto layout */
   flex: none;
   order: 0;
   align-self: stretch;
   flex-grow: 1;
   z-index: 0;
 }
-.auto-added-frame {
-  /* Auto-added frame */
 
-  /* Auto layout */
+/* remove style */
+
+/* .auto-added-frame {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -142,13 +136,11 @@ body {
 
   width: 134px;
   height: 76px;
-
-  /* Inside auto layout */
   flex: none;
   order: 0;
   align-self: stretch;
   flex-grow: 0;
-}
+} */
 
 .texts {
   /* Text */
@@ -167,6 +159,14 @@ body {
   order: 1;
   align-self: stretch;
   flex-grow: 1;
+}
+
+.search-area {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
 .auto-added-frame {
@@ -190,90 +190,33 @@ body {
 }
 
 .auto-added-frame-button {
-  /* Button
-  /* Auto layout */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
   gap: 8px;
-  isolation: isolate;
-
   width: 134px;
-  height: 40px;
-
-  /* GreyScale/100 */
+  height: 45px;
   background: #000000;
   border-radius: 12px;
-
-  /* Inside auto layout */
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 
 .state-layer {
-  /* state-layer */
-  font-family: "BonyadeKoodak", sans-serif; /* Use the specified font family */
-
-  box-sizing: border-box;
-
-  /* Auto layout */
+  font-family: "BonyadeKoodak", sans-serif;
+  height: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 10px 16px;
   gap: 8px;
-
-  position: static;
-  left: 0px;
-  right: 0px;
-  top: -4px;
-  bottom: 4px;
-
-  /* GreyScale/0 */
   background: #ffffff;
-  /* GreyScale/100 */
   border: 2px solid #000000;
   border-radius: 12px;
-
-  /* Inside auto layout */
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  z-index: 0;
 }
 
 .label-text {
-  /* label-text */
-
-  width: 68px;
-  height: 20px;
-
-  /* M3/label/large */
   font-family: "Bonyade Koodak FaNum";
-  font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 14px;
-  line-height: 20px;
-  /* identical to box height, or 143% */
-  display: flex;
-  align-items: center;
-  text-align: center;
-  /* Text Light mode/Title */
   color: #0f1013;
-  /* Inside auto layout */
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 
 .text {
-  /* Text */
-
-  /* Auto layout */
   display: flex;
   flex-direction: row;
   align-items: flex-start;
